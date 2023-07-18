@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>21 Dares | Local Online Game</title>
+<meta charset="utf-8">
+
+<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	
+<div class="wrapper">
+		<div class='oss-widget-interface'></div>
+		<div class="header">
+
+			<div class="outer">
+				<div class="inner">
+					<h1 id="logo" style="font-weight: bold;">Twenty1 Dares</span></h1>
+				</div>
+			</div>
+			
+			<div class="content-wrap">
+				<div class="comingsoon">
+					<p id="test"> Click on an option button to start playing!</p>
+				</div>
+	
+				<div class="content">
+					<p class="print">
+					<span
+     				class="txt-rotate"
+     				data-period="2000"
+     				data-rotate='[ "Truth","Dare","Double Dare","Situation","Burning House"]'></span></p>
+					<button type="button" class="button" onclick="truth()">Truth</button>
+          <button type="button"  class="button" onclick="dare()">Dare</button>
+          <button type="button"  class="button" onclick="doubledare()">Double Dare</button>
+          <button type="button"  class="button" onclick="situation()">Situation</button>
+          <button type="button"  class="button" onclick="burninghouse()">Burning House</button>
+				</div>
+			</div>
+				
+		</div> 
+					
+		<div class="social">
+		    <br/>
+		    <p style="color: #68b2b1" id="count">Developed with &hearts; by youniboy!</p>
+		    <p id="count" style="color: #68b2b1"></p>
+        <br/>
+		    <button type="button" class="button button1 button2" onclick="finish()">Finish</button>
+        <br/> <br/>
+        <a href="https://www.facebook.com/" class="fa-stack fa-lg">
+         <i class="fa fa-circle fa-stack-2x"></i>
+         <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://twitter.com/" class="fa-stack fa-lg">
+         <i class="fa fa-circle fa-stack-2x"></i>
+         <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/" class="fa-stack fa-lg">
+         <i class="fa fa-circle fa-stack-2x"></i>
+         <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </a>
+		</div>
+</div>
+
+<script>
+
+  var count=0;
+  var t=0;
+  var d=0;
+  var dd=0;
+  var s=0;
+  var bh=0;
+
+  function truth()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function(){
+    if(this.readyState==4&this.status==200)
+    {
+      document.getElementById("test").innerHTML=this.responseText;
+      count++;
+      t++;
+      document.getElementById("count").innerHTML="Rounds = "+count;
+    }
+  };
+  xhttp.open("get","refresh.php?choice=truth",true);
+  xhttp.send();
+  }
+
+  function dare()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function(){
+    if(this.readyState==4&this.status==200)
+    {
+      document.getElementById("test").innerHTML=this.responseText;
+      count++;
+      d++;
+      document.getElementById("count").innerHTML="Rounds = "+count;
+    }
+  };
+  xhttp.open("get","refresh.php?choice=dare",true);
+  xhttp.send();
+  }
+
+  function doubledare()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function(){
+    if(this.readyState==4&this.status==200)
+    {
+      document.getElementById("test").innerHTML=this.responseText;
+      count++;
+      dd++;
+      document.getElementById("count").innerHTML="Rounds = "+count;
+    }
+  };
+  xhttp.open("get","refresh.php?choice=doubledare",true);
+  xhttp.send();
+  }
+
+  function situation()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function(){
+    if(this.readyState==4&this.status==200)
+    {
+      document.getElementById("test").innerHTML=this.responseText;
+      count++;
+      s++;
+      document.getElementById("count").innerHTML="Rounds = "+count;
+    }
+  };
+  xhttp.open("get","refresh.php?choice=situation",true);
+  xhttp.send();
+  }
+
+  function burninghouse()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function(){
+    if(this.readyState==4&this.status==200)
+    {
+      document.getElementById("test").innerHTML=this.responseText;
+      count++;
+      bh++;
+      document.getElementById("count").innerHTML="Rounds = "+count;
+    }
+  };
+  xhttp.open("get","refresh.php?choice=burninghouse",true);
+  xhttp.send();
+  }
+
+  function finish()
+  {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange=function(){
+    if(this.readyState==4&this.status==200)
+    {
+      document.getElementById("test").innerHTML=this.responseText;
+    }
+  };
+  xhttp.open("get","count.php?num="+t+"&num1="+d+"&num2="+dd+"&num3="+s+"&num4="+bh,true);
+  xhttp.send();
+  }
+
+</script>
+
+<script src="js/index.js"></script>
+ 
+</body>
+
+</html>
