@@ -98,9 +98,8 @@ text-align: center;
 }
 
 .comingsoon{
-	width: 50%;
 	float: left;
-	border-right: 1px solid #b4d9d8;
+	border-right: 0px solid #b4d9d8;
 	box-sizing: border-box;
 }
 
